@@ -1,0 +1,8 @@
+import pandas_datareader as api
+import matplotlib.pyplot as plt
+
+cotacao_bitcoin = api.DataReader('BTC-USD', data_source='yahoo', start='01-01-2022', end='02-28-2022')
+print(cotacao_bitcoin)
+
+cotacao_bitcoin['Adj Close'].plot()
+plt.show()
